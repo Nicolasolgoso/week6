@@ -1,11 +1,21 @@
 number = 10
+HasPaintedPoints = False
 
 while number >= 0:
-    if number >= 3 and number <= 7:
-        if number == 3:
+    userInput = input("Qué cable quieres cortar?")
+    if userInput == "red":
+        print("Te has salvado")
+        break
+    if (number > 2 and number < 8):
+        if not HasPaintedPoints:
             print("...")
-    else:
-        print(number)
+            HasPaintedPoints = True
+            number = 3
+            number -= 1 
+        continue
+    print(number)
     number -= 1
 
-print("BOOM")
+print("La bomba ha explotado")
+        
+           
